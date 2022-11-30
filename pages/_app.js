@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import { poppins } from "../fonts";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <div className={poppins.className}>
+      <Component {...pageProps} />
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;
