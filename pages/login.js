@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../layout/layout";
-import styles from "../styles/Form.module.css"
+import styles from "../styles/Form.module.css";
+import { HiAtSymbol, HiFingerPrint } from "react-icons/hi";
 
 export default function Login() {
   return (
@@ -23,23 +24,54 @@ export default function Login() {
         {/* form */}
         <form className="flex flex-col gap-5">
           <div className={styles.input_group}>
-            <input className={styles.input_text} type="email" name="email" placeholder="Email" />
+            <input
+              className={styles.input_text}
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <span className="icon flex items-center px-4">
+              <HiAtSymbol size={25} />
+            </span>
           </div>
           <div className={styles.input_group}>
-            <input className={styles.input_text} type="password" name="password" placeholder="Password" />
+            <input
+              className={styles.input_text}
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+            <span className="icon flex items-center px-4">
+              <HiFingerPrint size={25} />
+            </span>
           </div>
           {/* Login Button  */}
           <div className="input-button">
-            <button className={styles.button} type="submit">Login</button>
-          </div>
-          <div className="input-button">
-            <button className={styles.button_custom} type="button">Sign in with Google
-              <Image src={'/assets/google.svg'} width="20" height="20" />
+            <button className={styles.button} type="submit">
+              Login
             </button>
           </div>
           <div className="input-button">
-            <button className={styles.button_custom} type="button">Sign in with Github
-            <Image src={'/assets/github.svg'} width="25" height="25" /></button>
+            <button className={styles.button_custom} type="button">
+              Sign in with Google
+              <Image
+                src={"/assets/google.svg"}
+                width="20"
+                height="20"
+                alt="icon"
+              />
+            </button>
+          </div>
+          <div className="input-button">
+            <button className={styles.button_custom} type="button">
+              Sign in with Github
+              <Image
+                src={"/assets/github.svg"}
+                width="25"
+                height="25"
+                alt="icon"
+              />
+            </button>
           </div>
         </form>
 
